@@ -1,0 +1,77 @@
+{
+    "Model_"name"": "East Coast NAIP 9 Class",
+    "Regional_Description": "New York, Maryland, Virginia, West Virginia, Pennsylvania, Delaware",
+    "Imagery": "NAIP 2013, 2014, 2015, 2016, 2017",
+    "Imagery_Resolution": "100 cm",
+    "Label_Sources": "Chesapeake Conservancy",
+    "Training_Data_AOI": "https://mvpmodels.blob.core.windows.net/cc6-ne-combined/cc6ne_states.geojson",
+    "Model_Type": "pytorch_example",
+    "Model_Inputshape": [
+        256,
+        256,
+        4
+    ],
+    "F1_Weighted": 0.85,
+    "Classes": [
+        {
+            "name": "water",
+            "color": "#486DA2"
+        },
+        {
+            "name": "emergent_wetlands",
+            "color": "#00A884"
+        },
+        {
+            "name": "tree_canopy",
+            "color": "#6CA966"
+        },
+        {
+            "name": "shrubland",
+            "color": "#ABC964"
+        },
+        {
+            "name": "low_vegetation",
+            "color": "#D0F3AB"
+        },
+        {
+            "name": "barren",
+            "color": "#D2AD74"
+        },
+        {
+            "name": "structure",
+            "color": "#F10100"
+        },
+        {
+            "name": "impervious_surface",
+            "color": "#BFB5B5"
+        },
+        {
+            "name": "impervious_roads",
+            "color": "#320000"
+        }
+    ],
+    "Classes_Description": "https://chesapeakeconservancy.org/wp-content/uploads/2020/03/LC_Class_Descriptions.pdf",
+    "Class_Distribution": {
+        "water": 0.048,
+        "emergent_wetlands": 0.005,
+        "tree_canopy": 0.63,
+        "shrubland": 0.001,
+        "low_vegetation": 0.28,
+        "barren": 0.003,
+        "structure": 0.005,
+        "impervious_surface": 0.02,
+        "impervious_roads": 0.01
+    },
+    "F1_Score": {
+        "water": 0.56,
+        "emergent_wetlands": 0.00,
+        "tree_canopy": 0.89,
+        "shrubland": 0.0,
+        "low_vegetation": 0.72,
+        "barren": 0.0,
+        "structure": 0.21,
+        "impervious_surface": 0.25,
+        "impervious_roads": 0.39
+    },
+    "Model_Files": "https://mvpmodels.blob.core.windows.net/cc6-ne-combined-9cls/model-3.zip"
+}

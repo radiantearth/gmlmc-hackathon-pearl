@@ -1,0 +1,47 @@
+{
+    "Model_Name": "East Coast NAIP 5 Class",
+    "Regional_Description": "New York, Maryland, Virginia, West Virginia, Pennsylvania, Delaware",
+    "Imagery": "NAIP 2013, 2014, 2015, 2016, 2017",
+    "Imagery_Resolution": "100 cm",
+    "Label_Sources": "Chesapeake Conservancy",
+    "Training_Data_AOI": "https://mvpmodels.blob.core.windows.net/cc6-ne-combined/cc6ne_states.geojson",
+    "Model_Type": "pytorch_example",
+    "Model_Inputshape": [
+        256,
+        256,
+        4
+    ],
+    "F1_Weighted": 0.87,
+    "Classes": [
+        {
+            "name": "water/wetland",
+            "color": "#486DA2"
+        },
+        {
+            "name": "tree",
+            "color": "#6CA966"
+        },
+        {
+            "name": "low vegetation/barren",
+            "color": "#D0F3AB"
+        },
+        {
+            "name": "built enviornment",
+            "color": "#BFB5B5"
+        }
+    ],
+    "Classes_Description": "https://chesapeakeconservancy.org/wp-content/uploads/2020/03/LC_Class_Descriptions.pdf",
+    "Class_Distribution": {
+        "water/wetland": 0.05,
+        "tree": 0.63,
+        "low vegetation/barren": 0.29,
+        "built enviornment": 0.03
+    },
+    "F1_Score": {
+        "water/wetland": 0.55,
+        "tree": 0.90,
+        "low vegetation/barren": 0.72,
+        "built enviornment": 0.56
+    },
+    "Model_Files": "https://mvpmodels.blob.core.windows.net/cc-ne-combined-4cls/model-4.zip"
+}
