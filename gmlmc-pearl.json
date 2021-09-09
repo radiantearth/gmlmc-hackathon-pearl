@@ -1,0 +1,103 @@
+{
+    "version": "0.1.0",
+    "model_id": "508c7d5c-295c-4474-bc35-2dec8215e8a4",
+    "model_type": {
+        "learning_approach": "Supervised",
+        "prediction_type": "Segmentation",
+        "architecture": "FCN",
+        "description": "9 class land cover, naip, segmentation, Chespeake Conservency, north east US,
+        water, wetlands, tree canopy, shrubland, low_vegetation, barren, structure, impervious roads, imprevious surface"
+    },
+    "license": "MIT",
+    "contacts": [
+        {
+            "name": "Some Person",
+            "organization": "Development Seed",
+            "email": "info@developmentseed.org"
+        }
+    ],
+    "citation": {
+        "doi": "10.1000/xyz123",
+        "citation": "RECOMMENDED CITATION HERE",
+        "publications": [
+            {
+                "doi": "10.1111/xyz123",
+                "citation": "PUBLICATION CITATION HERE"
+            }
+        ]
+    },
+    "training": {
+        "created_at": "2021-02-12T23:20:50.52Z",
+        "environment": {
+            "processor": {
+                "number_of_cores": 8,
+                "processor_type": "P-100"
+            },
+            "operating_system": "linux",
+            "programming_language": "Python",
+            "dependencies": "https://github.com/radiantearth/gmlmc-hackathon-pearl/blob/main/pytorch-env.yml"
+        },
+        "data": [
+            "https://registry.mlhub.earth/10.1109/CVPR.2019.01301/" #to-do this is for Caleb's model, we need to make a STAC catalog
+        ]
+    },
+    "inputs": [
+        {
+            "name": "input_var_1",
+            "type": "float32",
+            "shape": [
+                4,
+                256,
+                256
+            ],
+            "description": "Images were normalized by diving by 255 <link to where that happens in source code>,
+            model was trained on 256,
+            256 but runs inference with 288,
+            288, <link to how labels were manipulated>"
+        }
+    ],
+    "outputs": [
+        {
+            "type": "float32",
+            "shape": [
+                256,
+                256
+            ],
+            "description": "array that captures the highest landcover probability value after softmax is applied to model predictions"
+        }
+    ],
+    "runtimes": [
+        {
+            "type": "docker",
+            "properties": {
+                "format": "Docker",
+                "link": "myregistryhost:5000/organization/model_container:1.0.0",
+                "code_examples": [
+                    "https://www.github.com/myorganization/greatexamples"
+                ],
+                "host_requirements": "???"
+            }
+        }
+    ],
+    "usage_recommendations": {
+        "recommendations": [
+            {
+                "spatial": [
+                    [
+                        34.18,
+                        0.47,
+                        34.37,
+                        0.71
+                    ]
+                ],
+                "temporal": [
+                    [
+                        "2016-01-01T00:00:00Z",
+                        "2019-12-31T00:00:00Z"
+                    ]
+                ],
+                "description": "9 class landcover classification over NAIP imagery, model was only trained in NE US can technically be inferenced anywhere, but will perform better closer to regions similar to NE US "
+            }
+        ]
+    }
+}
