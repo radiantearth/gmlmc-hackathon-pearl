@@ -81,14 +81,14 @@
     ],
     "metrics": {
         "split_type": "test",
-        "global:" {
+        "global": {
             "F1_Weighted_Global": 0.85,
             "IoU_Global": 0.7,
             "MaP_Global": 0.6,
             "Recall_Global": 0.85,
             "Precision_Global": 0.85
         },
-        "custom_metrics:" {
+        "custom_metrics": {
             "F1_Score": {
                 "water": 0.56,
                 "emergent_wetlands": 0.00,
