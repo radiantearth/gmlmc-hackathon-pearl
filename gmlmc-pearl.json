@@ -79,6 +79,29 @@
             }
         }
     ],
+    "metrics": {
+        "split_type": "test",
+        "global:" {
+            "F1_Weighted_Global": 0.85,
+            "IoU_Global": 0.7,
+            "MaP_Global": 0.6,
+            "Recall_Global": 0.85,
+            "Precision_Global": 0.85
+        },
+        "custom_metrics:" {
+            "F1_Score": {
+                "water": 0.56,
+                "emergent_wetlands": 0.00,
+                "tree_canopy": 0.89,
+                "shrubland": 0.0,
+                "low_vegetation": 0.72,
+                "barren": 0.0,
+                "structure": 0.21,
+                "impervious_surface": 0.25,
+                "impervious_roads": 0.39
+            }
+        }
+    },
     "usage_recommendations": {
         "recommendations": [
             {
